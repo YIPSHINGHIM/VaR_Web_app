@@ -1,0 +1,261 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.2, pytest-7.1.3, pluggy-1.0.0
+rootdir: /Users/him/coding/Uni - year 3/final year project local/PROJECT/Server/api/VaR_app/test
+collected 12 items
+
+back_testing.py ..FF..FFF.F.                                             [100%]
+
+=================================== FAILURES ===================================
+____________ test_back_testing_historical_simulation_AAPL_2020_2022 ____________
+
+    def test_back_testing_historical_simulation_AAPL_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_Historical_Simulation,cal_VaR_HS,AAPL_2020_2022)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.06896551724137931 <= 0.05
+
+back_testing.py:123: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.06896551724137931
+0.06896551724137931
+_________ test_back_testing_historical_simulation_Portfolio_2020_2022 __________
+
+    def test_back_testing_historical_simulation_Portfolio_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_Historical_Simulation,cal_VaR_HS,Portfolio_2020_2022,portfolio_weights)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.10610079575596817 <= 0.05
+
+back_testing.py:128: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.10610079575596817
+0.10610079575596817
+_____________ test_back_testing_parametric_method_1_AAPL_2020_2022 _____________
+
+    def test_back_testing_parametric_method_1_AAPL_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_parametric_method,cal_VaR_PM_1,AAPL_2020_2022)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.07161803713527852 <= 0.05
+
+back_testing.py:151: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.07161803713527852
+0.07161803713527852
+__________ test_back_testing_parametric_method_1_Portfolio_2020_2022 ___________
+
+    def test_back_testing_parametric_method_1_Portfolio_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_parametric_method,cal_VaR_PM_1,Portfolio_2020_2022,portfolio_weights)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.10875331564986737 <= 0.05
+
+back_testing.py:156: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.10875331564986737
+0.10875331564986737
+_____________ test_back_testing_parametric_method_2_AAPL_2018_2019 _____________
+
+    def test_back_testing_parametric_method_2_AAPL_2018_2019():
+        back_test_result = back_test_function(cal_VaR_by_parametric_method,cal_VaR_PM_2,AAPL_2018_2019)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.22 <= 0.05
+
+back_testing.py:168: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(250,)
+(250,)
+0.22
+0.22
+_____________ test_back_testing_parametric_method_2_AAPL_2020_2022 _____________
+
+    def test_back_testing_parametric_method_2_AAPL_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_parametric_method,cal_VaR_PM_2,AAPL_2020_2022)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.33687002652519893 <= 0.05
+
+back_testing.py:178: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.33687002652519893
+0.33687002652519893
+=========================== short test summary info ============================
+FAILED back_testing.py::test_back_testing_historical_simulation_AAPL_2020_2022
+FAILED back_testing.py::test_back_testing_historical_simulation_Portfolio_2020_2022
+FAILED back_testing.py::test_back_testing_parametric_method_1_AAPL_2020_2022
+FAILED back_testing.py::test_back_testing_parametric_method_1_Portfolio_2020_2022
+FAILED back_testing.py::test_back_testing_parametric_method_2_AAPL_2018_2019
+FAILED back_testing.py::test_back_testing_parametric_method_2_AAPL_2020_2022
+========================= 6 failed, 6 passed in 5.95s ==========================
+❯ pytest back_testing.py
+============================= test session starts ==============================
+platform darwin -- Python 3.9.2, pytest-7.1.3, pluggy-1.0.0
+rootdir: /Users/him/coding/Uni - year 3/final year project local/PROJECT/Server/api/VaR_app/test
+collected 20 items
+
+back_testing.py ..FF..FFF.F...FF..FF                                     [100%]
+
+=================================== FAILURES ===================================
+____________ test_back_testing_historical_simulation_AAPL_2020_2022 ____________
+
+    def test_back_testing_historical_simulation_AAPL_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_Historical_Simulation,cal_VaR_HS,AAPL_2020_2022)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.06896551724137931 <= 0.05
+
+back_testing.py:123: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.06896551724137931
+0.06896551724137931
+_________ test_back_testing_historical_simulation_Portfolio_2020_2022 __________
+
+    def test_back_testing_historical_simulation_Portfolio_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_Historical_Simulation,cal_VaR_HS,Portfolio_2020_2022,portfolio_weights)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.10610079575596817 <= 0.05
+
+back_testing.py:128: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.10610079575596817
+0.10610079575596817
+_____________ test_back_testing_parametric_method_1_AAPL_2020_2022 _____________
+
+    def test_back_testing_parametric_method_1_AAPL_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_parametric_method,cal_VaR_PM_1,AAPL_2020_2022)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.07161803713527852 <= 0.05
+
+back_testing.py:151: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.07161803713527852
+0.07161803713527852
+__________ test_back_testing_parametric_method_1_Portfolio_2020_2022 ___________
+
+    def test_back_testing_parametric_method_1_Portfolio_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_parametric_method,cal_VaR_PM_1,Portfolio_2020_2022,portfolio_weights)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.10875331564986737 <= 0.05
+
+back_testing.py:156: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.10875331564986737
+0.10875331564986737
+_____________ test_back_testing_parametric_method_2_AAPL_2018_2019 _____________
+
+    def test_back_testing_parametric_method_2_AAPL_2018_2019():
+        back_test_result = back_test_function(cal_VaR_by_parametric_method,cal_VaR_PM_2,AAPL_2018_2019)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.22 <= 0.05
+
+back_testing.py:168: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(250,)
+(250,)
+0.22
+0.22
+_____________ test_back_testing_parametric_method_2_AAPL_2020_2022 _____________
+
+    def test_back_testing_parametric_method_2_AAPL_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_parametric_method,cal_VaR_PM_2,AAPL_2020_2022)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.33687002652519893 <= 0.05
+
+back_testing.py:178: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.33687002652519893
+0.33687002652519893
+_______ test_back_testing_monte_carlo_simulation_method_1_AAPL_2020_2022 _______
+
+    def test_back_testing_monte_carlo_simulation_method_1_AAPL_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_Monte_Carlo_Simulation_method,cal_VaR_MS_1,AAPL_2020_2022)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.05570291777188329 <= 0.05
+
+back_testing.py:209: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.05570291777188329
+0.05570291777188329
+____ test_back_testing_monte_carlo_simulation_method_1_Portfolio_2020_2022 _____
+
+    def test_back_testing_monte_carlo_simulation_method_1_Portfolio_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_Monte_Carlo_Simulation_method,cal_VaR_MS_1,Portfolio_2020_2022,portfolio_weights)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.09549071618037135 <= 0.05
+
+back_testing.py:214: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.09549071618037135
+0.09549071618037135
+_______ test_back_testing_monte_carlo_simulation_method_2_AAPL_2020_2022 _______
+
+    def test_back_testing_monte_carlo_simulation_method_2_AAPL_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_Monte_Carlo_Simulation_method,cal_VaR_MS_2,AAPL_2020_2022)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.058355437665782495 <= 0.05
+
+back_testing.py:238: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.058355437665782495
+0.058355437665782495
+____ test_back_testing_monte_carlo_simulation_method_2_Portfolio_2020_2022 _____
+
+    def test_back_testing_monte_carlo_simulation_method_2_Portfolio_2020_2022():
+        back_test_result = back_test_function(cal_VaR_by_Monte_Carlo_Simulation_method,cal_VaR_MS_2,Portfolio_2020_2022,portfolio_weights)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.09549071618037135 <= 0.05
+
+back_testing.py:243: AssertionError
+----------------------------- Captured stdout call -----------------------------
+(377,)
+(377,)
+0.09549071618037135
+0.09549071618037135
+=========================== short test summary info ============================
+FAILED back_testing.py::test_back_testing_historical_simulation_AAPL_2020_2022
+FAILED back_testing.py::test_back_testing_historical_simulation_Portfolio_2020_2022
+FAILED back_testing.py::test_back_testing_parametric_method_1_AAPL_2020_2022
+FAILED back_testing.py::test_back_testing_parametric_method_1_Portfolio_2020_2022
+FAILED back_testing.py::test_back_testing_parametric_method_2_AAPL_2018_2019
+FAILED back_testing.py::test_back_testing_parametric_method_2_AAPL_2020_2022
+FAILED back_testing.py::test_back_testing_monte_carlo_simulation_method_1_AAPL_2020_2022
+FAILED back_testing.py::test_back_testing_monte_carlo_simulation_method_1_Portfolio_2020_2022
+FAILED back_testing.py::test_back_testing_monte_carlo_simulation_method_2_AAPL_2020_2022
+FAILED back_testing.py::test_back_testing_monte_carlo_simulation_method_2_Portfolio_2020_2022
+================= 10 failed, 10 passed in 11433.33s (3:10:33) ==================

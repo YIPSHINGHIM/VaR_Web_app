@@ -1,0 +1,46 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.2, pytest-7.1.3, pluggy-1.0.0
+rootdir: /Users/him/coding/Uni - year 3/final year project local/PROJECT/Server/api/VaR_app/test
+collected 20 items
+
+stress_testing.py ........F.FF........                                   [100%]
+
+=================================== FAILURES ===================================
+___________ test_stress_testing_parametric_method_2_single_stock_200 ___________
+
+    def test_stress_testing_parametric_method_2_single_stock_200():
+        back_test_result = stress_test_function(cal_VaR_by_parametric_method,cal_VaR_PM_2,AAPL_201day_data)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.31 <= 0.05
+
+stress_testing.py:141: AssertionError
+----------------------------- Captured stdout call -----------------------------
+0.31
+__________ test_stress_testing_parametric_method_2_single_stock_1000 ___________
+
+    def test_stress_testing_parametric_method_2_single_stock_1000():
+        back_test_result = stress_test_function(cal_VaR_by_parametric_method,cal_VaR_PM_2,AAPL_1001day_data)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.312 <= 0.05
+
+stress_testing.py:151: AssertionError
+----------------------------- Captured stdout call -----------------------------
+0.312
+____________ test_stress_testing_parametric_method_2_portfolio_1000 ____________
+
+    def test_stress_testing_parametric_method_2_portfolio_1000():
+        back_test_result = stress_test_function(cal_VaR_by_parametric_method,cal_VaR_PM_2,portfolio_stock_data_1001day)
+        print(back_test_result)
+>       assert back_test_result <= 0.05
+E       assert 0.062 <= 0.05
+
+stress_testing.py:156: AssertionError
+----------------------------- Captured stdout call -----------------------------
+0.062
+=========================== short test summary info ============================
+FAILED stress_testing.py::test_stress_testing_parametric_method_2_single_stock_200
+FAILED stress_testing.py::test_stress_testing_parametric_method_2_single_stock_1000
+FAILED stress_testing.py::test_stress_testing_parametric_method_2_portfolio_1000
+================== 3 failed, 17 passed in 11012.89s (3:03:32) ==================
